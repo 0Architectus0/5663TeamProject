@@ -85,12 +85,7 @@ in SQL Server Express, with appropriate primary keys. It is important that each 
 appropriate data type of your choosing.
 
 4. Using SSIS and create separate tables for each of the contexxtCSV files from ContextCSVSheets2003.xls. The numerical code column in each contextCSV file will be the primary key and must have exactly the same data type for the corresponding column in one of the 3 main CSV files. For example, the table corresponding to accident_severity has the following code and description:
-
-  > 1 Fatal
-  > 2 Serious
-  > 3 Slight
- 
-  Its primary key should be the accident_severity_code (code) and the second column contains the accident_severity_description (label). This table will then be linked with the main accident_severity column of the Accident table. You have to do this for every relevant column that matches up with the tables corresponding to the contextCSV files.  You may want to prefix these contextCSV tables with their relevant main table names. E.g., accident_accident_severity will be the table corresponding to the accident_severity contextCSV. You may also want to prefix the column names of these tables with the name of the table. 
+Its primary key should be the accident_severity_code (code) and the second column contains the accident_severity_description (label). This table will then be linked with the main accident_severity column of the Accident table. You have to do this for every relevant column that matches up with the tables corresponding to the contextCSV files.  You may want to prefix these contextCSV tables with their relevant main table names. E.g., accident_accident_severity will be the table corresponding to the accident_severity contextCSV. You may also want to prefix the column names of these tables with the name of the table. 
   Example: accident_severity_code and 
             accident_severity_description.
   
