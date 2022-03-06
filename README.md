@@ -67,7 +67,7 @@ Any columns not described by the context CSV files can be found in the main data
 Road-Safety-Open-Dataset-Data-Guide.xlsx from Canvas. It can be used as a reference.
 
 ### Phase 1 Activities
-
+***
 1. Come up with appropriate data types for every column in all the CSV files. Use the guidelines from the 
 class lecture. It is very important that any fields (columns) that are linked (such as with primary key – 
 foreign key relationships) across multiple tables have the exactly same data type. (Hint: Use smallint for 
@@ -83,36 +83,27 @@ on your respective team database.
 and Vehicles0515.csv to separate relational tables (Accidents, Casualties and Vehicles table, respectively) 
 in SQL Server Express, with appropriate primary keys. It is important that each column has an 
 appropriate data type of your choosing.
-4. Using SSIS and create separate tables for each of the contexxtCSV files from ContextCSVSheets2003.xls. 
-The numerical code column in each contextCSV file will be the primary key and must have exactly the 
-same data type for the corresponding column in one of the 3 main CSV files. 
-For example, the table corresponding to accident_severity has the following code and description:
+
+4. Using SSIS and create separate tables for each of the contexxtCSV files from ContextCSVSheets2003.xls. The numerical code column in each contextCSV file will be the primary key and must have exactly the same data type for the corresponding column in one of the 3 main CSV files. For example, the table corresponding to accident_severity has the following code and description:
 
   > 1 Fatal
   > 2 Serious
   > 3 Slight
  
-Its primary key should be the accident_severity_code (code) and the second column contains the 
-accident_severity_description (label). This table will then be linked with the main 
-accident_severity column of the Accident table. You have to do this for every relevant column that 
-matches up with the tables corresponding to the contextCSV files.  You may want to prefix these 
-contextCSV tables with their relevant main table names. E.g., accident_accident_severity will be 
-the table corresponding to the accident_severity contextCSV. You may also want to prefix the 
-column names of these tables with the name of the table. Example: accident_severity_code and 
-accident_severity_description.
+  Its primary key should be the accident_severity_code (code) and the second column contains the accident_severity_description (label). This table will then be linked with the main accident_severity column of the Accident table. You have to do this for every relevant column that matches up with the tables corresponding to the contextCSV files.  You may want to prefix these contextCSV tables with their relevant main table names. E.g., accident_accident_severity will be the table corresponding to the accident_severity contextCSV. You may also want to prefix the column names of these tables with the name of the table. 
+  Example: accident_severity_code and 
+            accident_severity_description.
+  
 5. Using SSMS, you will then establish primary-key foreign key constraints among the three main tables 
 (Accidents, Casualties and Vehicles) as well as between each of the main tables and their column code 
 tables (see diagram based on my implementation below).
+
 6. Justify whether your entire relational database is in 3NF or not. You don’t have to take every context 
 table; you can argue with just one of them.
+
 7. Queries: Come up with 10 queries that answer interesting questions.
- Write out what the query is answering first in English narrative and then give the query and 
-its response output (You can limit records to 10 or so; enough to show a representative 
-sample). 
- Each query must include at least two main tables (Accidents, Casualties, Vehicles) and at 
-least two context tables. No query must be from just one table.
- Your queries must include examples of subqueries (uncorrelated and correlated), JOIN 
-queries (at least one of them an outer join), GROUP BY, GROUP BY ROLLUP, GROUP BY CUBE. 
-In every query, make a note that highlight which of these features have been included.
-8. Conclusion: Write a short one paragraph of what you feel about using a normalized database such as this 
-to extract business intelligence using SQL. What do you think are the strengths and limitations?
+  -  Write out what the query is answering first in English narrative and then give the query and its response output (You can limit records to 10 or so; enough to show a representative sample).
+  -  Each query must include at least two main tables (Accidents, Casualties, Vehicles) and at least two context tables. No query must be from just one table.
+  -  Your queries must include examples of subqueries (uncorrelated and correlated), JOIN queries (at least one of them an outer join), GROUP BY, GROUP BY ROLLUP, GROUP BY CUBE. 
+  -  In every query, make a note that highlight which of these features have been included.
+8. Conclusion: Write a short one paragraph of what you feel about using a normalized database such as this to extract business intelligence using SQL. What do you think are the strengths and limitations?
