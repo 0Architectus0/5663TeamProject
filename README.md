@@ -97,7 +97,7 @@ appropriate data type of your choosing.
       <td>3</td><td>Slight</td>
     </tr>
   </table><br>Its primary key should be the accident_severity_code (code) and the second column contains the accident_severity_description (label). This table will then be linked with the main accident_severity column of the Accident table. You have to do this for every relevant column that matches up with the tables corresponding to the contextCSV files.  You may want to prefix these contextCSV tables with their relevant main table names. E.g., accident_accident_severity will be the table corresponding to the accident_severity contextCSV. You may also want to prefix the column names of these tables with the name of the table.<br>
-  Example: accident_severity_code and accident_severity_description.
+  Example: accident_severity_code and accident_severity_description.</p>
   
 5. Using SSMS, you will then establish primary-key foreign key constraints among the three main tables 
 (Accidents, Casualties and Vehicles) as well as between each of the main tables and their column code 
