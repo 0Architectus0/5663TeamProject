@@ -61,19 +61,24 @@ the ContextCSV files as separate sheets with the appropriate names (see table be
     </td>
     </tr>
   </table>
+  
 Any columns not described by the context CSV files can be found in the main data page, by clicking the main files 
 (Accidents0515.csv, Casualties0515.csv and Vehicles0515.csv). Also, download the Data Dictionary spreadsheet 
 Road-Safety-Open-Dataset-Data-Guide.xlsx from Canvas. It can be used as a reference.
+
 ### Phase 1 Activities
+
 1. Come up with appropriate data types for every column in all the CSV files. Use the guidelines from the 
 class lecture. It is very important that any fields (columns) that are linked (such as with primary key – 
 foreign key relationships) across multiple tables have the exactly same data type. (Hint: Use smallint for 
 code columns in contextCSV tables as well as for their corresponding columns in the Accidents, Vehicles 
 and Casualties Tables. The one exception is local_highway_authority which should be nchar(10).)
+
 2. I will create a Database with your Section Type and your Team Number on stwssbsql01.ad.okstate.edu 
 server. For example, Distance_Team01 or Tuesday_Team01, or Thursday_Team01. All members of a team 
 will have access to their particular database. You will create the tables discussed below and issue queries 
 on your respective team database.
+
 3. Using SSIS (Lecture 4 Video, when available) convert each of the Accidents0515.csv, Casualties0515.csv 
 and Vehicles0515.csv to separate relational tables (Accidents, Casualties and Vehicles table, respectively) 
 in SQL Server Express, with appropriate primary keys. It is important that each column has an 
@@ -82,9 +87,11 @@ appropriate data type of your choosing.
 The numerical code column in each contextCSV file will be the primary key and must have exactly the 
 same data type for the corresponding column in one of the 3 main CSV files. 
 For example, the table corresponding to accident_severity has the following code and description:
-> 1 Fatal
-> 2 Serious
-> 3 Slight
+
+  > 1 Fatal
+  > 2 Serious
+  > 3 Slight
+ 
 Its primary key should be the accident_severity_code (code) and the second column contains the 
 accident_severity_description (label). This table will then be linked with the main 
 accident_severity column of the Accident table. You have to do this for every relevant column that 
