@@ -18,7 +18,7 @@ I have created a zipfile TermProjectFiles.zip in Canvas that contains the Accide
 Vehicles0515.csv files as well as a Microsoft Excel 97-2003 file called ContextCSVSheets2003.xls that contains all 
 the ContextCSV files as separate sheets with the appropriate names (see table below).
 
-<table>
+<table style="margin-left:3em;">
   <tr>
     <th>Accidents0515.csv</th><th>Casualties0515.csv</th><th>Vehicles0515.csv</th>
   </tr>
@@ -86,7 +86,7 @@ appropriate data type of your choosing.
 
 4. <p>Using SSIS and create separate tables for each of the contexxtCSV files from ContextCSVSheets2003.xls. The numerical code column in each contextCSV file will be the primary key and must have exactly the same data type for the corresponding column in one of the 3 main CSV files.<br> For example, the table corresponding to accident_severity has the following code and description:<br><tab>
 
-  <table>
+  <table style="margin-left:3em;">
     <tr>
       <td>1</td><td>Fatal</td>
     </tr>  
@@ -96,8 +96,8 @@ appropriate data type of your choosing.
     <tr>  
       <td>3</td><td>Slight</td>
     </tr>
-  </table><br>Its primary key should be the accident_severity_code (code) and the second column contains the accident_severity_description (label). This table will then be linked with the main accident_severity column of the Accident table. You have to do this for every relevant column that matches up with the tables corresponding to the contextCSV files.  You may want to prefix these contextCSV tables with their relevant main table names. E.g., accident_accident_severity will be the table corresponding to the accident_severity contextCSV. You may also want to prefix the column names of these tables with the name of the table.<br>
-  Example: accident_severity_code and accident_severity_description.</p>
+  </table>
+  Its primary key should be the accident_severity_code (code) and the second column contains the accident_severity_description (label). This table will then be linked with the main accident_severity column of the Accident table. You have to do this for every relevant column that matches up with the tables corresponding to the contextCSV files.  You may want to prefix these contextCSV tables with their relevant main table names. E.g., accident_accident_severity will be the table corresponding to the accident_severity contextCSV. You may also want to prefix the column names of these tables with the name of the table.<br>Example: accident_severity_code and accident_severity_description.</p>
   
 5. Using SSMS, you will then establish primary-key foreign key constraints among the three main tables 
 (Accidents, Casualties and Vehicles) as well as between each of the main tables and their column code 
