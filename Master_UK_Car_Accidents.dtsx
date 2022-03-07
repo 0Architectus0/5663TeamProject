@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{8CF0BE7E-760F-4824-BD11-0343BB14191F}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{2CA75944-68E9-46A6-9996-3CAE1C473C3E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -63,7 +63,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>LoadVehicles.dtsx</PackageName>
+          <PackageName>Load_Vehicles.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -87,7 +87,7 @@
         <NodeLayout
           Size="189,42"
           Id="Package\Execute LoadCasualties"
-          TopLeft="492,127" />
+          TopLeft="489,125" />
         <NodeLayout
           Size="180,42"
           Id="Package\Execute LoadVehicles"

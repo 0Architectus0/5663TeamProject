@@ -1,0 +1,1995 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/6/2022 9:21:25 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SSB-MSIS-039"
+  DTS:CreatorName="OSU\vinrodr"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{FC2EAB25-8F91-41A3-969A-BB24A099D156}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Vehicles"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{BC5CD061-25B6-4248-B337-6193A762BF55}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3F0CA5B1-120B-4094-BA46-215BB3B19E05}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=stwssbsql01.ad.okstate.edu;User ID=&quot;&quot;;Initial Catalog=Distance_Team11;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;Initial File Name=&quot;&quot;;Server SPN=&quot;&quot;;Authentication=&quot;&quot;;Access Token=&quot;&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D71ACF7C-C5E8-4819-9DE1-7BC40E377172}"
+      DTS:ObjectName="SourceConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\vinrodr\source\repos\5663TeamProject\data\TermProjectFiles\TermProjectFiles\Vehicles0515.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{8AD62CAA-D4CA-4908-80EF-49F7994F954D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Reference"
+              DTS:DTSID="{0B4E8F0A-E550-451C-A214-E12E703A76F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Type"
+              DTS:DTSID="{71D1BAA6-F711-4B12-B3D0-0C3E1AC4E8F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Towing_and_Articulation"
+              DTS:DTSID="{0A74DF5D-1FBE-48A4-83A8-D61E6938CBBE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Manoeuvre"
+              DTS:DTSID="{A664FD22-7F65-4A2C-8953-02D78D5264A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Location-Restricted_Lane"
+              DTS:DTSID="{52EDEED8-4F1F-4A99-AAFF-666BBA2D4C97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Junction_Location"
+              DTS:DTSID="{166C7D7B-9D91-48BE-967A-8ABE3857D706}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Skidding_and_Overturning"
+              DTS:DTSID="{8AB6DF7C-6B3C-49E6-A249-133585E5A91B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hit_Object_in_Carriageway"
+              DTS:DTSID="{E368D1C2-89C5-48C1-9F12-A3DE8D19C491}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Leaving_Carriageway"
+              DTS:DTSID="{E44C2E4E-22C9-451E-89B5-8EEB6B4B0658}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hit_Object_off_Carriageway"
+              DTS:DTSID="{7514D6E7-D708-4A00-8C09-9F8D3FA05A7C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1st_Point_of_Impact"
+              DTS:DTSID="{6E20ED3F-14F6-4485-9D43-9E9B36AEF775}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
+              DTS:DTSID="{52651C70-05E8-4D91-8647-7E1461A4F87C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Journey_Purpose_of_Driver"
+              DTS:DTSID="{77E1995E-0E80-43D5-A9E9-6785836EB21B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex_of_Driver"
+              DTS:DTSID="{11B4D792-56C8-4D84-9748-3173514D853A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Driver"
+              DTS:DTSID="{AAEBB378-1DA3-49A7-AABA-956CA06F6E76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_Band_of_Driver"
+              DTS:DTSID="{029690E2-4EC1-4734-B803-676F333D31C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Engine_Capacity_(CC)"
+              DTS:DTSID="{D39458A6-DCFC-4781-9E9C-C375D2176311}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Propulsion_Code"
+              DTS:DTSID="{210AD400-884A-4082-837D-AD8A9CC142FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Vehicle"
+              DTS:DTSID="{B72EAA2D-7A4C-40C7-AC1B-3FAF1A6F294A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Driver_IMD_Decile"
+              DTS:DTSID="{060674BC-F711-4E7D-9E36-7F9FBD5C88E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Driver_Home_Area_Type"
+              DTS:DTSID="{1CFB89BF-C4FB-4EAF-80F4-BED47C8CA02A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{741B47E6-7A59-4D53-877A-07DA6AD0CBA8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Data Conversion 0 - 0"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion 0 - 0"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Vehicle_Reference]"
+                      cachedDataType="i1"
+                      cachedName="Vehicle_Reference"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Reference]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Vehicle_Type]"
+                      cachedDataType="i1"
+                      cachedName="Vehicle_Type"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Towing_and_Articulation]"
+                      cachedDataType="i1"
+                      cachedName="Towing_and_Articulation"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Towing_and_Articulation]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Vehicle_Manoeuvre]"
+                      cachedDataType="i1"
+                      cachedName="Vehicle_Manoeuvre"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Manoeuvre]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Vehicle_Location-Restricted_Lane]"
+                      cachedDataType="i1"
+                      cachedName="Vehicle_Location-Restricted_Lane"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Location-Restricted_Lane]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Junction_Location]"
+                      cachedDataType="i1"
+                      cachedName="Junction_Location"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Junction_Location]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Skidding_and_Overturning]"
+                      cachedDataType="i1"
+                      cachedName="Skidding_and_Overturning"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Skidding_and_Overturning]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Hit_Object_in_Carriageway]"
+                      cachedDataType="i1"
+                      cachedName="Hit_Object_in_Carriageway"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Hit_Object_in_Carriageway]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Vehicle_Leaving_Carriageway]"
+                      cachedDataType="i1"
+                      cachedName="Vehicle_Leaving_Carriageway"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Leaving_Carriageway]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Hit_Object_off_Carriageway]"
+                      cachedDataType="i1"
+                      cachedName="Hit_Object_off_Carriageway"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Hit_Object_off_Carriageway]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[1st_Point_of_Impact]"
+                      cachedDataType="i1"
+                      cachedName="1st_Point_of_Impact"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[1st_Point_of_Impact]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      cachedDataType="i1"
+                      cachedName="Was_Vehicle_Left_Hand_Drive?"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Was_Vehicle_Left_Hand_Drive?]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Journey_Purpose_of_Driver]"
+                      cachedDataType="i1"
+                      cachedName="Journey_Purpose_of_Driver"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Sex_of_Driver]"
+                      cachedDataType="i1"
+                      cachedName="Sex_of_Driver"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Sex_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Age_of_Driver]"
+                      cachedDataType="i1"
+                      cachedName="Age_of_Driver"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Age_Band_of_Driver]"
+                      cachedDataType="i1"
+                      cachedName="Age_Band_of_Driver"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_Band_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Propulsion_Code]"
+                      cachedDataType="i1"
+                      cachedName="Propulsion_Code"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Propulsion_Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Age_of_Vehicle]"
+                      cachedDataType="i1"
+                      cachedName="Age_of_Vehicle"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Driver_IMD_Decile]"
+                      cachedDataType="i1"
+                      cachedName="Driver_IMD_Decile"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Driver_IMD_Decile]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Driver_Home_Area_Type]"
+                      cachedDataType="i1"
+                      cachedName="Driver_Home_Area_Type"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Driver_Home_Area_Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Accident_Index"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Engine_Capacity_(CC)]"
+                      cachedDataType="i4"
+                      cachedName="Engine_Capacity_(CC)"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Engine_Capacity_(CC)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Reference]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Reference]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Type]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Type]"
+                      name="Vehicle_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Type]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Towing_and_Articulation]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Towing_and_Articulation]"
+                      name="Towing_and_Articulation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Towing_and_Articulation]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Manoeuvre]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Manoeuvre]"
+                      name="Vehicle_Manoeuvre"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Manoeuvre]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Location-Restricted_Lane]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Location-Restricted_Lane]"
+                      name="Vehicle_Location-Restricted_Lane"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Location-Restricted_Lane]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Junction_Location]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Junction_Location]"
+                      name="Junction_Location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Junction_Location]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Skidding_and_Overturning]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Skidding_and_Overturning]"
+                      name="Skidding_and_Overturning"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Skidding_and_Overturning]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Hit_Object_in_Carriageway]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Hit_Object_in_Carriageway]"
+                      name="Hit_Object_in_Carriageway"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Hit_Object_in_Carriageway]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Leaving_Carriageway]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Leaving_Carriageway]"
+                      name="Vehicle_Leaving_Carriageway"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Leaving_Carriageway]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Hit_Object_off_Carriageway]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Hit_Object_off_Carriageway]"
+                      name="Hit_Object_off_Carriageway"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Hit_Object_off_Carriageway]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[1st_Point_of_Impact]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[1st_Point_of_Impact]"
+                      name="1st_Point_of_Impact"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[1st_Point_of_Impact]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      name="Was_Vehicle_Left_Hand_Drive?"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Was_Vehicle_Left_Hand_Drive?]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Journey_Purpose_of_Driver]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Journey_Purpose_of_Driver]"
+                      name="Journey_Purpose_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Sex_of_Driver]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Sex_of_Driver]"
+                      name="Sex_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Sex_of_Driver]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Age_of_Driver]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Age_of_Driver]"
+                      name="Age_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_of_Driver]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Age_Band_of_Driver]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Age_Band_of_Driver]"
+                      name="Age_Band_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_Band_of_Driver]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Propulsion_Code]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Propulsion_Code]"
+                      name="Propulsion_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Propulsion_Code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Age_of_Vehicle]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Age_of_Vehicle]"
+                      name="Age_of_Vehicle"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Driver_IMD_Decile]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Driver_IMD_Decile]"
+                      name="Driver_IMD_Decile"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Driver_IMD_Decile]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Driver_Home_Area_Type]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Driver_Home_Area_Type]"
+                      name="Driver_Home_Area_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Driver_Home_Area_Type]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]"
+                      name="Copy of Accident_Index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Accident_Index]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Engine_Capacity_(CC)]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Engine_Capacity_(CC)]"
+                      name="Copy of Engine_Capacity_(CC)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Engine_Capacity_(CC)]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Destination - Vehicles"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - Vehicles"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[RAW].[Vehicles]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - Vehicles.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Vehicle_Reference]"
+                      cachedDataType="i2"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Reference]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Vehicle_Type]"
+                      cachedDataType="i2"
+                      cachedName="Vehicle_Type"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Type]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Towing_and_Articulation]"
+                      cachedDataType="i2"
+                      cachedName="Towing_and_Articulation"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Towing_and_Articulation]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Towing_and_Articulation]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Vehicle_Manoeuvre]"
+                      cachedDataType="i2"
+                      cachedName="Vehicle_Manoeuvre"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Manoeuvre]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Manoeuvre]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Vehicle_Location-Restricted_Lane]"
+                      cachedDataType="i2"
+                      cachedName="Vehicle_Location-Restricted_Lane"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Location-Restricted_Lane]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Junction_Location]"
+                      cachedDataType="i2"
+                      cachedName="Junction_Location"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Junction_Location]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Junction_Location]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Skidding_and_Overturning]"
+                      cachedDataType="i2"
+                      cachedName="Skidding_and_Overturning"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Skidding_and_Overturning]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Skidding_and_Overturning]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Hit_Object_in_Carriageway]"
+                      cachedDataType="i2"
+                      cachedName="Hit_Object_in_Carriageway"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Hit_Object_in_Carriageway]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Hit_Object_in_Carriageway]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Vehicle_Leaving_Carriageway]"
+                      cachedDataType="i2"
+                      cachedName="Vehicle_Leaving_Carriageway"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Vehicle_Leaving_Carriageway]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Hit_Object_off_Carriageway]"
+                      cachedDataType="i2"
+                      cachedName="Hit_Object_off_Carriageway"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Hit_Object_off_Carriageway]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Hit_Object_off_Carriageway]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[1st_Point_of_Impact]"
+                      cachedDataType="i2"
+                      cachedName="1st_Point_of_Impact"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[1st_Point_of_Impact]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[1st_Point_of_Impact]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      cachedDataType="i2"
+                      cachedName="Was_Vehicle_Left_Hand_Drive?"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Was_Vehicle_Left_Hand_Drive?]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Journey_Purpose_of_Driver]"
+                      cachedDataType="i2"
+                      cachedName="Journey_Purpose_of_Driver"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Journey_Purpose_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Sex_of_Driver]"
+                      cachedDataType="i2"
+                      cachedName="Sex_of_Driver"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Sex_of_Driver]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Sex_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Age_of_Driver]"
+                      cachedDataType="i2"
+                      cachedName="Age_of_Driver"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Age_of_Driver]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Age_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Age_Band_of_Driver]"
+                      cachedDataType="i2"
+                      cachedName="Age_Band_of_Driver"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Age_Band_of_Driver]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Age_Band_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Engine_Capacity_(CC)]"
+                      cachedDataType="i4"
+                      cachedName="Engine_Capacity_(CC)"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Engine_Capacity_(CC)]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Engine_Capacity_(CC)]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Propulsion_Code]"
+                      cachedDataType="i2"
+                      cachedName="Propulsion_Code"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Propulsion_Code]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Propulsion_Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Age_of_Vehicle]"
+                      cachedDataType="i2"
+                      cachedName="Age_of_Vehicle"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Age_of_Vehicle]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Driver_IMD_Decile]"
+                      cachedDataType="i2"
+                      cachedName="Driver_IMD_Decile"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Driver_IMD_Decile]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Driver_IMD_Decile]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].Columns[Driver_Home_Area_Type]"
+                      cachedDataType="i2"
+                      cachedName="Driver_Home_Area_Type"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Driver_Home_Area_Type]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Driver_Home_Area_Type]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Reference]"
+                      dataType="i2"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Type]"
+                      dataType="i2"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Towing_and_Articulation]"
+                      dataType="i2"
+                      name="Towing_and_Articulation" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Manoeuvre]"
+                      dataType="i2"
+                      name="Vehicle_Manoeuvre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      dataType="i2"
+                      name="Vehicle_Location-Restricted_Lane" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Junction_Location]"
+                      dataType="i2"
+                      name="Junction_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Skidding_and_Overturning]"
+                      dataType="i2"
+                      name="Skidding_and_Overturning" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Hit_Object_in_Carriageway]"
+                      dataType="i2"
+                      name="Hit_Object_in_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      dataType="i2"
+                      name="Vehicle_Leaving_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Hit_Object_off_Carriageway]"
+                      dataType="i2"
+                      name="Hit_Object_off_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[1st_Point_of_Impact]"
+                      dataType="i2"
+                      name="1st_Point_of_Impact" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="i2"
+                      name="Was_Vehicle_Left_Hand_Drive?" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      dataType="i2"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Sex_of_Driver]"
+                      dataType="i2"
+                      name="Sex_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Age_of_Driver]"
+                      dataType="i2"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Age_Band_of_Driver]"
+                      dataType="i2"
+                      name="Age_Band_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Engine_Capacity_(CC)]"
+                      dataType="i4"
+                      name="Engine_Capacity_(CC)" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Propulsion_Code]"
+                      dataType="i2"
+                      name="Propulsion_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      dataType="i2"
+                      name="Age_of_Vehicle" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Driver_IMD_Decile]"
+                      dataType="i2"
+                      name="Driver_IMD_Decile" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input].ExternalColumns[Driver_Home_Area_Type]"
+                      dataType="i2"
+                      name="Driver_Home_Area_Type" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - Vehicles.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - Vehicles.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - Vehicles.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - Vehicles.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - Vehicles0515_csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Source - Vehicles0515_csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Type]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Type]"
+                      name="Vehicle_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Towing_and_Articulation]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Towing_and_Articulation]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Towing_and_Articulation]"
+                      name="Towing_and_Articulation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Manoeuvre]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Manoeuvre]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Manoeuvre]"
+                      name="Vehicle_Manoeuvre"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Location-Restricted_Lane]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Location-Restricted_Lane]"
+                      name="Vehicle_Location-Restricted_Lane"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Junction_Location]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Junction_Location]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Junction_Location]"
+                      name="Junction_Location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Skidding_and_Overturning]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Skidding_and_Overturning]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Skidding_and_Overturning]"
+                      name="Skidding_and_Overturning"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Hit_Object_in_Carriageway]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_in_Carriageway]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Hit_Object_in_Carriageway]"
+                      name="Hit_Object_in_Carriageway"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Leaving_Carriageway]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Vehicle_Leaving_Carriageway]"
+                      name="Vehicle_Leaving_Carriageway"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Hit_Object_off_Carriageway]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_off_Carriageway]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Hit_Object_off_Carriageway]"
+                      name="Hit_Object_off_Carriageway"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[1st_Point_of_Impact]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[1st_Point_of_Impact]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[1st_Point_of_Impact]"
+                      name="1st_Point_of_Impact"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      name="Was_Vehicle_Left_Hand_Drive?"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]"
+                      name="Journey_Purpose_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Sex_of_Driver]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Sex_of_Driver]"
+                      name="Sex_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_of_Driver]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_of_Driver]"
+                      name="Age_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_Band_of_Driver]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Driver]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_Band_of_Driver]"
+                      name="Age_Band_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Engine_Capacity_(CC)]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Engine_Capacity_(CC)]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Engine_Capacity_(CC)]"
+                      name="Engine_Capacity_(CC)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Propulsion_Code]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Propulsion_Code]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Propulsion_Code]"
+                      name="Propulsion_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Vehicle]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]"
+                      name="Age_of_Vehicle"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Driver_IMD_Decile]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Driver_IMD_Decile]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Driver_IMD_Decile]"
+                      name="Driver_IMD_Decile"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Driver_Home_Area_Type]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Driver_Home_Area_Type]"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].Columns[Driver_Home_Area_Type]"
+                      name="Driver_Home_Area_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      dataType="i1"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
+                      dataType="i1"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Towing_and_Articulation]"
+                      dataType="i1"
+                      name="Towing_and_Articulation" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Manoeuvre]"
+                      dataType="i1"
+                      name="Vehicle_Manoeuvre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      dataType="i1"
+                      name="Vehicle_Location-Restricted_Lane" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Junction_Location]"
+                      dataType="i1"
+                      name="Junction_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Skidding_and_Overturning]"
+                      dataType="i1"
+                      name="Skidding_and_Overturning" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_in_Carriageway]"
+                      dataType="i1"
+                      name="Hit_Object_in_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      dataType="i1"
+                      name="Vehicle_Leaving_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_off_Carriageway]"
+                      dataType="i1"
+                      name="Hit_Object_off_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[1st_Point_of_Impact]"
+                      dataType="i1"
+                      name="1st_Point_of_Impact" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="i1"
+                      name="Was_Vehicle_Left_Hand_Drive?" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      dataType="i1"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
+                      dataType="i1"
+                      name="Sex_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
+                      dataType="i1"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Driver]"
+                      dataType="i1"
+                      name="Age_Band_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Engine_Capacity_(CC)]"
+                      dataType="i4"
+                      name="Engine_Capacity_(CC)" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Propulsion_Code]"
+                      dataType="i1"
+                      name="Propulsion_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Vehicle]"
+                      dataType="i1"
+                      name="Age_of_Vehicle" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Driver_IMD_Decile]"
+                      dataType="i1"
+                      name="Driver_IMD_Decile" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output].ExternalColumns[Driver_Home_Area_Type]"
+                      dataType="i1"
+                      name="Driver_Home_Area_Type" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task 1\Destination - Vehicles.Inputs[Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - Vehicles0515_csv.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Drop table(s) SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{315E94A5-6E2F-4388-A9E3-13C0590ECAF9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Drop table(s) SQL Task 1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{E1EAAD23-AB2F-441D-866D-4593D098574A}"
+          SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[Vehicles]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[Vehicles]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{EE856550-6FF5-45B9-9D4B-52E7C3248466}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3F0CA5B1-120B-4094-BA46-215BB3B19E05}"
+          SQLTask:SqlStatementSource="CREATE TABLE [RAW].[Vehicles] (&#xA;[Accident_Index] varchar(15),&#xA;[Vehicle_Reference] smallint,&#xA;[Vehicle_Type] smallint,&#xA;[Towing_and_Articulation] smallint,&#xA;[Vehicle_Manoeuvre] smallint,&#xA;[Vehicle_Location-Restricted_Lane] smallint,&#xA;[Junction_Location] smallint,&#xA;[Skidding_and_Overturning] smallint,&#xA;[Hit_Object_in_Carriageway] smallint,&#xA;[Vehicle_Leaving_Carriageway] smallint,&#xA;[Hit_Object_off_Carriageway] smallint,&#xA;[1st_Point_of_Impact] smallint,&#xA;[Was_Vehicle_Left_Hand_Drive?] smallint,&#xA;[Journey_Purpose_of_Driver] smallint,&#xA;[Sex_of_Driver] smallint,&#xA;[Age_of_Driver] smallint,&#xA;[Age_Band_of_Driver] smallint,&#xA;[Engine_Capacity_(CC)] int,&#xA;[Propulsion_Code] smallint,&#xA;[Age_of_Vehicle] smallint,&#xA;[Driver_IMD_Decile] smallint,&#xA;[Driver_Home_Area_Type] smallint&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{3EBC3551-4187-45F9-9795-82978547E1D3\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{3EBC3551-4187-45F9-9795-82978547E1D3}"
+      DTS:From="Package\Drop table(s) SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{3EBC3551-4187-45F9-9795-82978547E1D3}"
+      DTS:To="Package\Preparation SQL Task 1"
+      DTS:Value="2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{402E933F-C8DE-4ADF-A80A-9D974AE49CF5\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{402E933F-C8DE-4ADF-A80A-9D974AE49CF5}"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{402E933F-C8DE-4ADF-A80A-9D974AE49CF5}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="24.5,209.5" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Drop table(s) SQL Task 1"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Preparation SQL Task 1"
+          TopLeft="9.50000000000003,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{402E933F-C8DE-4ADF-A80A-9D974AE49CF5\}]"
+          TopLeft="104.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{3EBC3551-4187-45F9-9795-82978547E1D3\}]"
+          TopLeft="104.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.304453125,20.4453125,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Data Flow Task 1\Source - Vehicles0515_csv"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Data Flow Task 1\Destination - Vehicles"
+          TopLeft="17,209.5" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Data Flow Task 1\Data Conversion 0 - 0"
+          TopLeft="16.5,107.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+          TopLeft="107.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Data Conversion Output]"
+          TopLeft="107.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Destination - Vehicles">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
