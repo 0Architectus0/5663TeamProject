@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:ObjectName="Accidents0515.csv"
-  DTS:DTSID="{288A922E-2367-463F-B51D-4B5C2DA57569}"
-  DTS:CreationName="MULTIFILE">
+  DTS:DTSID="{08F904E3-4480-4B0B-A0BB-E736C365D1C9}"
+  DTS:CreationName="FILE">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Z:\TermProjectFiles\Accidents0515.csv|Z:\TermProjectFiles\Casualties0515.csv|Z:\TermProjectFiles\ContextCSVSheets2003.xls|Z:\TermProjectFiles\Vehicles0515.csv" />
+      DTS:ConnectionString="C:\Users\vinrodr\source\repos\5663TeamProject\data\TermProjectFiles\TermProjectFiles\Accidents0515.csv" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
