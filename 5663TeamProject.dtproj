@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">SSB-MSIS-039</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAboT4RQJPeU2mpugobOH8lAAAAAACAAAAAAADZgAAwAAAABAAAADussdlfYKiYfFVgfpn0ZOhAAAAAASAAACgAAAAEAAAALWVTz9J5rb/hTiEaVJu+ieIAAAADX3mcFUfm5BdtttfnLmoPkcs0CdsVZqnZmMieLk5HCobEIE0/zzDxQSrq3dA0L7hyCELk+2W5sD5rYe8wz2yy254NLAh/K4UVxT2K4HvzJJkOtKZCyp+N2sh6261Smzopwv4RYFPrgn9GQjV9612QtRkIgpeCcVjgjVQ6LJAYJdUv/s4SPqEZhQAAAAQfjIVy0Y+f/B2+rPd385rWNx9Zw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAboT4RQJPeU2mpugobOH8lAAAAAACAAAAAAADZgAAwAAAABAAAAAyeD+ZrozBFfPx5rD7b/QUAAAAAASAAACgAAAAEAAAAF5Wab2h7CsMDMdXzeEi2kKIAAAAG5p3wfQt4oNEBQmz4q5NaLIrFVbcluv4JVWm25Abpuu5MjU4XL3zU6hnyt4YqeKVvxQ9z1s+eHGYZvd7iXCu3neFgfq5vAVCN7IxSOniQoIMA3s74dbd8XPVz3EHbUvv3Q9dxd5T+rs69swt4lvCfJCBVEt58mMRBqFk6tgosZfV5BuCE7VvDhQAAAC/iNXbOt6bBDSscGjM9VHPSB0lKg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -1234,10 +1234,10 @@
                 <SSIS:Property SSIS:Name="Name">Load_Casualties</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C867C73C-F018-4C38-A60D-123B8565BB2C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2D8FA1DF-A9F2-40E2-AE12-28E938EE0A71}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">SSIS Package Description</SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>

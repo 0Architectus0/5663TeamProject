@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Load_Casualties"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{C867C73C-F018-4C38-A60D-123B8565BB2C}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{2D8FA1DF-A9F2-40E2-AE12-28E938EE0A71}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -52,7 +52,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{C9BFF387-07BD-4A35-87E3-0D2283287EA3}"
+              DTS:DTSID="{995B7F15-F16C-4F17-B8A9-74F05AA9B88C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -60,7 +60,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{19200347-5BA6-42A0-BC0B-74DBBC056309}"
+              DTS:DTSID="{9838072C-2AC7-48DD-A1A3-5D2920C352D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +68,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Reference"
-              DTS:DTSID="{088A2BFF-A4E1-47C2-BD63-39E251A9DDB4}"
+              DTS:DTSID="{7EB52AE6-105F-4194-924C-F0A0EA793A9D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -76,7 +76,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Class"
-              DTS:DTSID="{357DCD69-90CF-4544-8601-5A75914FA93B}"
+              DTS:DTSID="{2A34432C-D114-4AA7-B356-CEE5E396EA0C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex_of_Casualty"
-              DTS:DTSID="{C747333F-E2CF-4E8A-99CA-A9009989D076}"
+              DTS:DTSID="{970DC714-396D-4F21-967E-52A093AD34FC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +92,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Casualty"
-              DTS:DTSID="{7B98EEBC-3224-4AE5-9EC0-9B1DBAE61B8D}"
+              DTS:DTSID="{9A67C4AC-11C1-4150-B73C-7EDD3596E7AA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -100,7 +100,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_Band_of_Casualty"
-              DTS:DTSID="{0E532145-D172-4D69-96E7-E69CD228C679}"
+              DTS:DTSID="{94FFB6A8-00C3-4F38-9309-30DED7E39AB5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -108,7 +108,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Severity"
-              DTS:DTSID="{044D1F51-82CD-45B1-8EE5-B05D2E31C01F}"
+              DTS:DTSID="{4DF6BD6A-A68A-4472-BD92-265AD2E4AD4F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -116,7 +116,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Location"
-              DTS:DTSID="{7DAB8C28-14C6-46DD-BAB9-493687F0D8F1}"
+              DTS:DTSID="{6AF0C47F-C486-42A9-AD04-02321A5409C7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -124,7 +124,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Movement"
-              DTS:DTSID="{883D96E3-430C-4E60-8F36-8C8AF1CBD4C2}"
+              DTS:DTSID="{80EA2C57-E24B-4303-9D55-049D84E6A92F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +132,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Car_Passenger"
-              DTS:DTSID="{41121963-B788-4951-885A-24097702A053}"
+              DTS:DTSID="{C4EF91DC-5449-4EE5-B449-AB09832CF219}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -140,7 +140,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Bus_or_Coach_Passenger"
-              DTS:DTSID="{D444513F-2BD8-40EF-9B75-8F9F3BC566F5}"
+              DTS:DTSID="{C18BC706-9154-4592-8D2E-DBBF78C771BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -148,7 +148,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
-              DTS:DTSID="{2686EB65-9AA2-4FCB-A0FF-6B26DD283ABF}"
+              DTS:DTSID="{E43830AB-A43D-4917-B42E-524F106921CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Type"
-              DTS:DTSID="{9B0F995A-216B-46EA-B793-137A0D7151EE}"
+              DTS:DTSID="{00E25935-18BF-4FC7-AD7B-EBDADA9BBF3E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +164,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Home_Area_Type"
-              DTS:DTSID="{88EB305C-59A8-49CB-ADA7-E5568F2D1412}"
+              DTS:DTSID="{0F3C82CF-E318-4CF6-98F5-0120A906CF3D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
