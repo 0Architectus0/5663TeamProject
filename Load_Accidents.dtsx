@@ -1,27 +1,39 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="3/6/2022 10:09:36 PM"
+  DTS:CreationDate="3/14/2022 6:24:43 PM"
   DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="SSB-MSIS-039"
+  DTS:CreatorComputerName="SSB-MSIS-041"
   DTS:CreatorName="OSU\vinrodr"
   DTS:Description="SSIS Package Description"
-  DTS:DTSID="{60EB4D8A-455B-4F2E-B533-AE0573430D16}"
+  DTS:DTSID="{C5C135BB-C343-428F-9F51-3669B2A1E1FF}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Load_Accidents"
   DTS:VersionBuild="3"
-  DTS:VersionGUID="{8F2E569A-FD45-4494-A98D-AA0480597A67}">
+  DTS:VersionGUID="{0B2D94EF-F37F-4510-B462-CC6D792F5982}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Accident0515_csv]"
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{213DBC95-48B1-450F-A3FA-0ACB2B81D872}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=stwssbsql01.ad.okstate.edu;User ID=&quot;&quot;;Initial Catalog=Distance_Team11;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;Initial File Name=&quot;&quot;;Server SPN=&quot;&quot;;Authentication=&quot;&quot;;Access Token=&quot;&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{95D4E930-4445-412A-8B06-4D824202611D}"
-      DTS:ObjectName="Accident0515_csv">
+      DTS:DTSID="{72A5000C-A938-47D5-A2F4-FA334AA911E4}"
+      DTS:ObjectName="SourceConnectionFlatFile">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -31,7 +43,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\vinrodr\source\repos\5663TeamProject\data\TermProjectFiles\TermProjectFiles\Accidents0515.csv">
+          DTS:ConnectionString="C:\Users\vinrodr\source\repos\0Architectus0\5663TeamProject\data\TermProjectFiles\TermProjectFiles\Accidents0515.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -40,7 +52,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{35D89B9E-302F-42DC-A1F9-D1EA441862AE}"
+              DTS:DTSID="{995A2DC0-2DEC-4A7F-A82A-4E93F856D010}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +60,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Location_Easting_OSGR"
-              DTS:DTSID="{528FAD0F-0E0C-43E0-BA6E-96F16F2F2270}"
+              DTS:DTSID="{8A1EC2E8-A3C4-4F71-8B9A-B4BFE445462D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -56,7 +68,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Location_Northing_OSGR"
-              DTS:DTSID="{A2B5F2FB-2A8D-4AFA-B928-F7560FD8C48C}"
+              DTS:DTSID="{EF821572-52AD-44AE-8E27-AD30234CFC63}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -64,7 +76,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Longitude"
-              DTS:DTSID="{2F4B5CB2-8459-4ABA-946B-A9583D2B3BE9}"
+              DTS:DTSID="{C4CBDBE5-699F-47D8-887F-2BE54C85051A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -72,7 +84,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Latitude"
-              DTS:DTSID="{9B8EC1CD-A3AA-4DD6-811E-022FDE624FFB}"
+              DTS:DTSID="{FB00C20D-4BFD-458F-BFE1-0D5836400D41}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -80,7 +92,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Police_Force"
-              DTS:DTSID="{B0E3A19D-C345-4D2A-9C06-6D9D6774CC58}"
+              DTS:DTSID="{9AACFFBF-9679-4CB1-8EC6-36A98E6F7196}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -88,7 +100,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Severity"
-              DTS:DTSID="{61429C6B-E4E3-460A-A1DB-F829AF911AE9}"
+              DTS:DTSID="{F8BE7CBC-9562-4205-95BF-DDC4AE92F353}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -96,7 +108,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Vehicles"
-              DTS:DTSID="{E96E76DB-19BB-40BB-9346-F0CC690D964A}"
+              DTS:DTSID="{190C2364-203B-4C2E-970B-43DF848AC367}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -104,16 +116,15 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Casualties"
-              DTS:DTSID="{5C4301E1-1845-4FDA-8DE2-CD665FAA3064}"
+              DTS:DTSID="{3698B190-C91A-438E-8170-19AE496F94D2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="129"
+              DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{4985082F-63B2-449B-B5F4-C547BCB21B56}"
+              DTS:DTSID="{EF09DCA4-D4F9-4788-A2C9-6023673AC0AB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -121,33 +132,32 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Day_of_Week"
-              DTS:DTSID="{9551B03A-134D-4165-9394-44248BD86653}"
+              DTS:DTSID="{46CB08FE-5C5E-495C-9963-494F44B34CD8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="7"
+              DTS:DataType="134"
               DTS:TextQualified="True"
               DTS:ObjectName="Time"
-              DTS:DTSID="{FC50491A-D5A6-4ADF-846D-B4E7F4DC886B}"
+              DTS:DTSID="{292480FB-BD86-43C0-9142-E9F0794C2D17}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="129"
+              DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_(District)"
-              DTS:DTSID="{9EB4CE6B-9F71-4E54-AA21-B99B7D16F8B6}"
+              DTS:DTSID="{4EFF78AD-10BA-4549-B4D1-68391A8EC1F2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
+              DTS:MaximumWidth="9"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_(Highway)"
-              DTS:DTSID="{1266A636-0580-4BBA-9EF0-F69C9454887E}"
+              DTS:DTSID="{FD915086-7AF6-47BD-ABFE-9597D2494CA5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -155,7 +165,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Road_Class"
-              DTS:DTSID="{842D38E7-5057-41DF-9D53-2436FBD7CD67}"
+              DTS:DTSID="{9ED49AEA-4C78-44D5-BD9B-8D558C915519}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -163,7 +173,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Road_Number"
-              DTS:DTSID="{D4EDFD6C-B93E-4800-B3FA-93E919A09A07}"
+              DTS:DTSID="{97B94B16-5D1F-4062-A54D-740B28445D45}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -171,7 +181,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Type"
-              DTS:DTSID="{A8CF2A83-8442-4F29-9F2F-F5385697D493}"
+              DTS:DTSID="{D20AE3A0-56EC-4F22-94B3-5FDF921A6B22}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -179,7 +189,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Speed_limit"
-              DTS:DTSID="{CCC91BB7-DDAA-4703-BF7E-883F9FD0187C}"
+              DTS:DTSID="{30624450-250D-4F62-B5F0-F2A19706AA5E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -187,7 +197,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Detail"
-              DTS:DTSID="{10B0EB3C-9394-4DAD-BD41-5BD03E54209D}"
+              DTS:DTSID="{D5C7B1A7-4998-4544-94E7-843270360DED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -195,7 +205,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Control"
-              DTS:DTSID="{812C4EAB-C356-4282-86BA-FC8AD6E19587}"
+              DTS:DTSID="{ADD26470-E77E-47A3-98C2-17400ED2D2B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -203,7 +213,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="2nd_Road_Class"
-              DTS:DTSID="{90C590A6-79DD-4527-93D7-7A4668A394A3}"
+              DTS:DTSID="{F0C08BBF-A989-4E60-9A2D-2AEF1C9DC2E1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -211,7 +221,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="2nd_Road_Number"
-              DTS:DTSID="{D280F806-BEAF-46DB-AE09-CE6C361F56A1}"
+              DTS:DTSID="{621D2A2A-362D-4EC4-8502-FB8096C20D85}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -219,7 +229,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Crossing-Human_Control"
-              DTS:DTSID="{E7060FAC-D3F6-45D6-A6FB-D730DF7EEAB4}"
+              DTS:DTSID="{8ABA7CF7-EF50-40A4-B5AF-29105C437911}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -227,7 +237,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Crossing-Physical_Facilities"
-              DTS:DTSID="{E947B439-0491-409A-96B3-D8DC6B589EC6}"
+              DTS:DTSID="{8FD3FBBC-EE00-4576-92CD-B75F8BF90D46}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -235,7 +245,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Light_Conditions"
-              DTS:DTSID="{070B7A3E-BF52-4465-86C2-1B843D05D45F}"
+              DTS:DTSID="{9B777EF6-02B3-4B9B-9BD4-D39427B3DCC5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -243,7 +253,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Weather_Conditions"
-              DTS:DTSID="{E12CC310-6935-40F5-BE34-D21BF89906B9}"
+              DTS:DTSID="{F48C2773-C13C-4F91-B6BC-149DE792B264}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -251,7 +261,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Surface_Conditions"
-              DTS:DTSID="{F9D44EA5-0732-436A-8D81-D13D8FBCFEF6}"
+              DTS:DTSID="{DB91ECE8-4281-4ECE-8226-205D814673E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -259,7 +269,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Special_Conditions_at_Site"
-              DTS:DTSID="{17269345-9178-4B96-BB43-FF988CFBC558}"
+              DTS:DTSID="{09E7B35B-065B-4B00-AA7C-EF3031BD6D88}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -267,7 +277,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Carriageway_Hazards"
-              DTS:DTSID="{3CFB869F-513A-4B9F-A361-6566A3316A9E}"
+              DTS:DTSID="{8E251B76-0FB1-4D4B-AF59-34CDED7D674A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -275,7 +285,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Urban_or_Rural_Area"
-              DTS:DTSID="{B551035E-8120-4E7B-A5CA-D61CB9004F3B}"
+              DTS:DTSID="{4107501C-4289-4483-805D-21A7978F96E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -283,31 +293,19 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Did_Police_Officer_Attend_Scene_of_Accident"
-              DTS:DTSID="{60F5BCDE-3AC4-4DB8-B3D4-77B431504E3E}"
+              DTS:DTSID="{EAA6F0F7-78A1-48E5-9D08-EE99E63DD58A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="10"
+              DTS:MaximumWidth="9"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LSOA_of_Accident_Location"
-              DTS:DTSID="{67F298E4-7DE3-41CD-9BCE-7AAB57533188}"
+              DTS:DTSID="{C6E0FCA1-EDFE-40B9-8700-FB62E5E4D2FE}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{07D5E3E4-60C2-4CE9-8909-0D666D28E948}"
-      DTS:ObjectName="DestinationConnectionOLEDB">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=stwssbsql01.ad.okstate.edu;User ID=&quot;&quot;;Initial Catalog=Distance_Team11;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;Initial File Name=&quot;&quot;;Server SPN=&quot;&quot;;Authentication=&quot;&quot;;Access Token=&quot;&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -317,7 +315,7 @@
       DTS:refId="Package\Data Flow Task 1"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:DelayValidation="True"
-      DTS:DTSID="{BA751C0E-62DE-4C57-A3AB-BD08EF083655}"
+      DTS:DTSID="{05176BA4-DA74-43EB-8CF4-6157CB8EB1A3}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:FailPackageOnFailure="True"
       DTS:LocaleID="-1"
@@ -363,7 +361,7 @@
                       lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Number_of_Casualties]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Date]"
-                      cachedDataType="dbTime2"
+                      cachedDataType="date"
                       cachedName="Date"
                       lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Date]" />
                     <inputColumn
@@ -376,20 +374,6 @@
                       cachedDataType="dbTime"
                       cachedName="Time"
                       lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Time]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Local_Authority_(District)]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Local_Authority_(District)"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Local_Authority_(Highway)]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Local_Authority_(Highway)"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Local_Authority_(Highway)]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[1st_Road_Class]"
                       cachedDataType="i1"
@@ -465,50 +449,6 @@
                       cachedDataType="i1"
                       cachedName="Did_Police_Officer_Attend_Scene_of_Accident"
                       lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Did_Police_Officer_Attend_Scene_of_Accident]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[LSOA_of_Accident_Location]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="LSOA_of_Accident_Location"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Accident_Index]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Accident_Index"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Accident_Index]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Location_Easting_OSGR]"
-                      cachedDataType="i4"
-                      cachedName="Location_Easting_OSGR"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Location_Easting_OSGR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Location_Northing_OSGR]"
-                      cachedDataType="i4"
-                      cachedName="Location_Northing_OSGR"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Location_Northing_OSGR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Longitude]"
-                      cachedDataType="r4"
-                      cachedName="Longitude"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Longitude]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Latitude]"
-                      cachedDataType="r4"
-                      cachedName="Latitude"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Latitude]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[1st_Road_Number]"
-                      cachedDataType="i2"
-                      cachedName="1st_Road_Number"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[1st_Road_Number]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[2nd_Road_Number]"
-                      cachedDataType="i2"
-                      cachedName="2nd_Road_Number"
-                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[2nd_Road_Number]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -602,7 +542,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Date]"
-                      dataType="dbTimeStamp2"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Date]"
@@ -654,48 +594,6 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Time]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Local_Authority_(District)]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Local_Authority_(District)]"
-                      name="Local_Authority_(District)"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Local_Authority_(Highway)]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Local_Authority_(Highway)]"
-                      name="Local_Authority_(Highway)"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Local_Authority_(Highway)]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1002,169 +900,6 @@
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[LSOA_of_Accident_Location]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[LSOA_of_Accident_Location]"
-                      name="LSOA_of_Accident_Location"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="15"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]"
-                      name="Copy of Accident_Index"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Accident_Index]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Location_Easting_OSGR]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Location_Easting_OSGR]"
-                      name="Copy of Location_Easting_OSGR"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Location_Easting_OSGR]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Location_Northing_OSGR]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Location_Northing_OSGR]"
-                      name="Copy of Location_Northing_OSGR"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Location_Northing_OSGR]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Longitude]"
-                      dataType="r4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Longitude]"
-                      name="Copy of Longitude"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Longitude]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Latitude]"
-                      dataType="r4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of Latitude]"
-                      name="Copy of Latitude"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Latitude]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of 1st_Road_Number]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of 1st_Road_Number]"
-                      name="Copy of 1st_Road_Number"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[1st_Road_Number]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of 2nd_Road_Number]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Copy of 2nd_Road_Number]"
-                      name="Copy of 2nd_Road_Number"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[2nd_Road_Number]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1235,7 +970,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
+                  name="FastLoadKeepIdentity">true</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
@@ -1323,7 +1058,7 @@
                       lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Number_of_Casualties]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].Columns[Date]"
-                      cachedDataType="dbTimeStamp2"
+                      cachedDataType="dbDate"
                       cachedName="Date"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[Date]"
                       lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Date]" />
@@ -1341,18 +1076,18 @@
                       lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Time]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].Columns[Local_Authority_(District)]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedDataType="i2"
                       cachedName="Local_Authority_(District)"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[Local_Authority_(District)]"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Local_Authority_(District)]" />
+                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].Columns[Local_Authority_(Highway)]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
                       cachedName="Local_Authority_(Highway)"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[Local_Authority_(Highway)]"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Local_Authority_(Highway)]" />
+                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Local_Authority_(Highway)]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].Columns[1st_Road_Class]"
                       cachedDataType="i2"
@@ -1457,11 +1192,12 @@
                       lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Did_Police_Officer_Attend_Scene_of_Accident]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].Columns[LSOA_of_Accident_Location]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
                       cachedName="LSOA_of_Accident_Location"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[LSOA_of_Accident_Location]"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[LSOA_of_Accident_Location]" />
+                      lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1505,7 +1241,7 @@
                       name="Number_of_Casualties" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[Date]"
-                      dataType="dbTimeStamp2"
+                      dataType="dbDate"
                       name="Date" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[Day_of_Week]"
@@ -1517,13 +1253,13 @@
                       name="Time" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[Local_Authority_(District)]"
-                      dataType="wstr"
-                      length="10"
+                      dataType="i2"
                       name="Local_Authority_(District)" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[Local_Authority_(Highway)]"
-                      dataType="wstr"
-                      length="10"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
                       name="Local_Authority_(Highway)" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[1st_Road_Class]"
@@ -1595,8 +1331,9 @@
                       name="Did_Police_Officer_Attend_Scene_of_Accident" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - Accidents.Inputs[Destination Input].ExternalColumns[LSOA_of_Accident_Location]"
-                      dataType="wstr"
-                      length="10"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
                       name="LSOA_of_Accident_Location" />
                   </externalMetadataColumns>
                 </input>
@@ -1648,8 +1385,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Accident0515_csv]"
-                  connectionManagerRefId="Package.ConnectionManagers[Accident0515_csv]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -1841,7 +1578,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Date]"
-                      dataType="dbTime2"
+                      dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[Date]"
@@ -1901,12 +1638,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i2"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(District)]"
-                      length="10"
                       lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]"
                       name="Local_Authority_(District)"
                       truncationRowDisposition="FailComponent">
@@ -1928,7 +1663,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(Highway)]"
-                      length="10"
+                      length="9"
                       lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[Local_Authority_(Highway)]"
                       name="Local_Authority_(Highway)"
                       truncationRowDisposition="FailComponent">
@@ -2290,7 +2025,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[LSOA_of_Accident_Location]"
-                      length="10"
+                      length="9"
                       lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]"
                       name="LSOA_of_Accident_Location"
                       truncationRowDisposition="FailComponent">
@@ -2348,9 +2083,7 @@
                       name="Number_of_Casualties" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[Date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="date"
                       name="Date" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[Day_of_Week]"
@@ -2358,19 +2091,17 @@
                       name="Day_of_Week" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[Time]"
-                      dataType="date"
+                      dataType="dbTime"
                       name="Time" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(District)]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="i2"
                       name="Local_Authority_(District)" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(Highway)]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="9"
                       name="Local_Authority_(Highway)" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[1st_Road_Class]"
@@ -2444,7 +2175,7 @@
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Output].ExternalColumns[LSOA_of_Accident_Location]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="9"
                       name="LSOA_of_Accident_Location" />
                   </externalMetadataColumns>
                 </output>
@@ -2455,7 +2186,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="65001"
+                      codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
                       lineageId="Package\Data Flow Task 1\Source - Accidents0515_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
@@ -2496,7 +2227,7 @@
     <DTS:Executable
       DTS:refId="Package\Drop table(s) SQL Task 1"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:DTSID="{9e10cc81-0b86-4b68-8f45-46e05b78bd26}"
+      DTS:DTSID="{A111887D-23F3-4F31-9143-DB545DA7D0EA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Drop table(s) SQL Task 1"
@@ -2504,14 +2235,14 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E1EAAD23-AB2F-441D-866D-4593D098574A}"
-          SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[Accidents]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[Accidents]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{213DBC95-48B1-450F-A3FA-0ACB2B81D872}"
+          SQLTask:SqlStatementSource="drop table [RAW].[Accidents]&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Preparation SQL Task 1"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:DTSID="{8DD7FBDD-9A2A-4FF2-8539-C8F8D9E22902}"
+      DTS:DTSID="{AB28347F-4566-4E5C-80CF-52C52C64EF41}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:FailPackageOnFailure="True"
       DTS:LocaleID="-1"
@@ -2520,27 +2251,28 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{07D5E3E4-60C2-4CE9-8909-0D666D28E948}"
-          SQLTask:SqlStatementSource="CREATE TABLE [RAW].[Accidents] (&#xA;[Accident_Index] varchar(15),&#xA;[Location_Easting_OSGR] int,&#xA;[Location_Northing_OSGR] int,&#xA;[Longitude] real,&#xA;[Latitude] real,&#xA;[Police_Force] smallint,&#xA;[Accident_Severity] smallint,&#xA;[Number_of_Vehicles] smallint,&#xA;[Number_of_Casualties] smallint,&#xA;[Date] datetime2(0),&#xA;[Day_of_Week] smallint,&#xA;[Time] time(0),&#xA;[Local_Authority_(District)] nchar(10),&#xA;[Local_Authority_(Highway)] nchar(10),&#xA;[1st_Road_Class] smallint,&#xA;[1st_Road_Number] smallint,&#xA;[Road_Type] smallint,&#xA;[Speed_limit] smallint,&#xA;[Junction_Detail] smallint,&#xA;[Junction_Control] smallint,&#xA;[2nd_Road_Class] smallint,&#xA;[2nd_Road_Number] smallint,&#xA;[Pedestrian_Crossing-Human_Control] smallint,&#xA;[Pedestrian_Crossing-Physical_Facilities] smallint,&#xA;[Light_Conditions] smallint,&#xA;[Weather_Conditions] smallint,&#xA;[Road_Surface_Conditions] smallint,&#xA;[Special_Conditions_at_Site] smallint,&#xA;[Carriageway_Hazards] smallint,&#xA;[Urban_or_Rural_Area] smallint,&#xA;[Did_Police_Officer_Attend_Scene_of_Accident] smallint,&#xA;[LSOA_of_Accident_Location] nchar(10)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{213DBC95-48B1-450F-A3FA-0ACB2B81D872}"
+          SQLTask:SqlStatementSource="CREATE TABLE [RAW].[Accidents](&#xA;&#x9;[Accident_Index] [varchar](15) NOT NULL,&#xA;&#x9;[Location_Easting_OSGR] [int] NULL,&#xA;&#x9;[Location_Northing_OSGR] [int] NULL,&#xA;&#x9;[Longitude] [real] NULL,&#xA;&#x9;[Latitude] [real] NULL,&#xA;&#x9;[Police_Force] [smallint] NULL,&#xA;&#x9;[Accident_Severity] [smallint] NULL,&#xA;&#x9;[Number_of_Vehicles] [smallint] NULL,&#xA;&#x9;[Number_of_Casualties] [smallint] NULL,&#xA;&#x9;[Date] [date] NULL,&#xA;&#x9;[Day_of_Week] [smallint] NULL,&#xA;&#x9;[Time] [time](0) NULL,&#xA;&#x9;[Local_Authority_(District)] [smallint] NULL,&#xA;&#x9;[Local_Authority_(Highway)] [nchar](10) NULL,&#xA;&#x9;[1st_Road_Class] [smallint] NULL,&#xA;&#x9;[1st_Road_Number] [smallint] NULL,&#xA;&#x9;[Road_Type] [smallint] NULL,&#xA;&#x9;[Speed_limit] [smallint] NULL,&#xA;&#x9;[Junction_Detail] [smallint] NULL,&#xA;&#x9;[Junction_Control] [smallint] NULL,&#xA;&#x9;[2nd_Road_Class] [smallint] NULL,&#xA;&#x9;[2nd_Road_Number] [smallint] NULL,&#xA;&#x9;[Pedestrian_Crossing-Human_Control] [smallint] NULL,&#xA;&#x9;[Pedestrian_Crossing-Physical_Facilities] [smallint] NULL,&#xA;&#x9;[Light_Conditions] [smallint] NULL,&#xA;&#x9;[Weather_Conditions] [smallint] NULL,&#xA;&#x9;[Road_Surface_Conditions] [smallint] NULL,&#xA;&#x9;[Special_Conditions_at_Site] [smallint] NULL,&#xA;&#x9;[Carriageway_Hazards] [smallint] NULL,&#xA;&#x9;[Urban_or_Rural_Area] [smallint] NULL,&#xA;&#x9;[Did_Police_Officer_Attend_Scene_of_Accident] [smallint] NULL,&#xA;&#x9;[LSOA_of_Accident_Location] [varchar](9) NULL,&#xA;    CONSTRAINT PK_Accidents PRIMARY KEY ([Accident_Index])&#xA;) &#xA;GO&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:refId="Package.PrecedenceConstraints[{49BDD066-0A25-4931-9787-86014C01EAE3\}]"
       DTS:CreationName=""
-      DTS:DTSID="{A629FBAB-0EF1-4915-95E3-0428E6650E10}"
+      DTS:DTSID="{49BDD066-0A25-4931-9787-86014C01EAE3}"
       DTS:From="Package\Drop table(s) SQL Task 1"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\Preparation SQL Task 1" />
+      DTS:ObjectName="{49BDD066-0A25-4931-9787-86014C01EAE3}"
+      DTS:To="Package\Preparation SQL Task 1"
+      DTS:Value="2" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[{FB8654CC-392A-484C-AD0A-1009ACEF39AB\}]"
+      DTS:refId="Package.PrecedenceConstraints[{A6585695-37D6-4879-8A02-49984C0B499A\}]"
       DTS:CreationName=""
-      DTS:DTSID="{FB8654CC-392A-484C-AD0A-1009ACEF39AB}"
+      DTS:DTSID="{A6585695-37D6-4879-8A02-49984C0B499A}"
       DTS:From="Package\Preparation SQL Task 1"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{FB8654CC-392A-484C-AD0A-1009ACEF39AB}"
+      DTS:ObjectName="{A6585695-37D6-4879-8A02-49984C0B499A}"
       DTS:To="Package\Data Flow Task 1" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
@@ -2554,18 +2286,22 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="160,42"
           Id="Package\Data Flow Task 1"
-          TopLeft="22.5,209.5" />
+          TopLeft="24.5,209.5" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Drop table(s) SQL Task 1"
+          TopLeft="5.50000000000001,5.5" />
         <NodeLayout
           Size="190,42"
           Id="Package\Preparation SQL Task 1"
-          TopLeft="7.50000000000001,107.5" />
+          TopLeft="9.50000000000003,107.5" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[{FB8654CC-392A-484C-AD0A-1009ACEF39AB\}]"
-          TopLeft="102.5,149.5">
+          Id="Package.PrecedenceConstraints[{49BDD066-0A25-4931-9787-86014C01EAE3\}]"
+          TopLeft="104.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2582,39 +2318,25 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-25.304453125,20.4453125,50.60890625,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="198,42"
-          Id="Package\Drop table(s) SQL Task 1"
-          TopLeft="12,4" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="111,46">
+          Id="Package.PrecedenceConstraints[{A6585695-37D6-4879-8A02-49984C0B499A\}]"
+          TopLeft="104.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.49999999999999,61.5"
+              EndConnector="0,60"
               Start="0,0"
-              End="-8.49999999999999,54">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.75"
-                    Point2="0,30.75"
-                    Point3="-4,30.75" />
-                  <mssgle:LineSegment
-                    End="-4.49999999999999,30.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.49999999999999,30.75"
-                    Point2="-8.49999999999999,30.75"
-                    Point3="-8.49999999999999,34.75" />
-                  <mssgle:LineSegment
-                    End="-8.49999999999999,54" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2632,6 +2354,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="210,42"
+          Id="Package\Data Flow Task 1\Source - Accidents0515_csv"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
           Size="187,42"
           Id="Package\Data Flow Task 1\Destination - Accidents"
           TopLeft="17,209.5" />
@@ -2639,32 +2365,6 @@
           Size="182,42"
           Id="Package\Data Flow Task 1\Data Conversion 0 - 0"
           TopLeft="19.5,107.5" />
-        <NodeLayout
-          Size="210,42"
-          Id="Package\Data Flow Task 1\Source - Accidents0515_csv"
-          TopLeft="5.50000000000001,5.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
-          TopLeft="110.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[Data Conversion Output]"
           TopLeft="110.5,149.5">
@@ -2687,21 +2387,30 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+          TopLeft="110.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 1\Destination - Accidents">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

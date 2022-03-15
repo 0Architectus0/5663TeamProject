@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Load_RefTables"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{AEC2758F-B377-4E44-B759-5CDA9C0EBBEC}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{FE69BDF4-E65B-4201-83BC-28EEB1ED73CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -38,7 +38,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dbluedi\source\repos\5663TeamProject\data\TermProjectFiles\TermProjectFiles\ContextCSVSheets2003.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\vinrodr\source\repos\0Architectus0\5663TeamProject\data\TermProjectFiles\TermProjectFiles\ContextCSVSheets2003.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -50,7 +50,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\vinrodr\source\repos\5663TeamProject\data\TermProjectFiles\TermProjectFiles\ContextCSVSheets2003.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\vinrodr\source\repos\0Architectus0\5663TeamProject\data\TermProjectFiles\TermProjectFiles\ContextCSVSheets2003.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1745,12 +1745,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop table(s) SQL Task 2"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
-              SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[casualty_severity') AND type in (N'U'))&#xA;DROP TABLE  [RAW].[casualty_severity]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[casualty_type]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[casualty_type]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[day_of_week]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[day_of_week]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[junction_control]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[junction_control]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[junction_detail]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[junction_detail]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[casualty_severity]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[casualty_severity]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[casualty_type]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[casualty_type]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[day_of_week]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[day_of_week]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[junction_control]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[junction_control]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[junction_detail]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[junction_detail]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -1761,12 +1761,12 @@
           DTS:FailPackageOnFailure="True"
           DTS:LocaleID="-1"
           DTS:ObjectName="Preparation SQL Task 2"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
-              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[casualty_severity] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[casualty_type] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[day_of_week] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[junction_control] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[junction_detail] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[casualty_severity] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_casualty_severty PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[casualty_type] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_casualty_type PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [RAW].[day_of_week] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_day_of_week PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [RAW].[junction_control] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_junction_control PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[junction_detail] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_junction_detail PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -3479,13 +3479,12 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop table(s) SQL Task 1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
-              SQLTask:BypassPrepare="False"
-              SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N' [RAW].[journey_purpose]') AND type in (N'U'))&#xA;DROP TABLE  [RAW].[journey_purpose]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[ped_cross_physical]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[ped_cross_physical]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[accident_severity]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[accident_severity]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[age_band]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[age_band]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[casualty_class]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[casualty_class]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[journey_purpose]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[journey_purpose]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[ped_cross_physical]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[ped_cross_physical]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[accident_severity]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[accident_severity]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[age_band]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[age_band]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[casualty_class]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[casualty_class]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -3496,13 +3495,13 @@
           DTS:FailPackageOnFailure="True"
           DTS:LocaleID="-1"
           DTS:ObjectName="Preparation SQL Task 1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
               SQLTask:BypassPrepare="False"
-              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[journey_purpose] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[ped_cross_physical] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[accident_severity] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[age_band] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[casualty_class] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[journey_purpose] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT pk_journey_purpose PRIMARY KEY ([code]) &#xA;)&#xA;GO&#xA;&#xA;CREATE TABLE [RAW].[ped_cross_physical] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT pk_ped_cross_physical PRIMARY KEY ([code]) &#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[accident_severity] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT pk_accident_sever PRIMARY KEY ([code]) &#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[age_band] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT pk_age_band PRIMARY KEY ([code]) &#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[casualty_class] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT pk_casualty_class PRIMARY KEY ([code]) &#xA;)&#xA;GO&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -3719,8 +3718,7 @@
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="Code"
-                          lineageId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 12 - local_authority_highway$.Outputs[Excel Source Output].Columns[Code]"
-                          name="Code" />
+                          lineageId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 12 - local_authority_highway$.Outputs[Excel Source Output].Columns[Code]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -3733,12 +3731,14 @@
                       synchronousInputId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 12 - 0.Inputs[Data Conversion Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 12 - 0.Outputs[Data Conversion Output].Columns[code]"
-                          dataType="i2"
+                          refId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 12 - 0.Outputs[Data Conversion Output].Columns[Copy of Code]"
+                          codePage="1252"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          lineageId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 12 - 0.Outputs[Data Conversion Output].Columns[code]"
-                          name="code"
+                          length="10"
+                          lineageId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 12 - 0.Outputs[Data Conversion Output].Columns[Copy of Code]"
+                          name="Copy of Code"
                           truncationRowDisposition="FailComponent">
                           <properties>
                             <property
@@ -4255,31 +4255,32 @@
                       name="Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].Columns[code]"
-                          cachedDataType="i2"
-                          cachedName="code"
-                          externalMetadataColumnId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].ExternalColumns[Code]"
-                          lineageId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 12 - 0.Outputs[Data Conversion Output].Columns[code]" />
+                          refId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].Columns[Copy of Code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="Copy of Code"
+                          externalMetadataColumnId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].ExternalColumns[code]"
+                          lineageId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 12 - 0.Outputs[Data Conversion Output].Columns[Copy of Code]" />
                         <inputColumn
                           refId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].Columns[Label]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="Label"
-                          externalMetadataColumnId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].ExternalColumns[Label]"
+                          externalMetadataColumnId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].ExternalColumns[label]"
                           lineageId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 12 - local_authority_highway$.Outputs[Excel Source Output].Columns[Label]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].ExternalColumns[Code]"
-                          dataType="wstr"
-                          length="10"
-                          name="Code" />
+                          refId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].ExternalColumns[code]"
+                          dataType="i2"
+                          name="code" />
                         <externalMetadataColumn
-                          refId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].ExternalColumns[Label]"
+                          refId="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway.Inputs[Destination Input].ExternalColumns[label]"
                           dataType="wstr"
                           length="255"
-                          name="Label" />
+                          name="label" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -5221,7 +5222,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Drop table(s) SQL Task 3"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5237,12 +5238,12 @@
           DTS:FailPackageOnFailure="True"
           DTS:LocaleID="-1"
           DTS:ObjectName="Preparation SQL Task 3"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
-              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[junction_location] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[light_conditions] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[local_authority_highway] (&#xA;[Code] nchar(10),&#xA;[Label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[local_authorty_district] (&#xA;[code] smallint,&#xA;[label] nchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[pedestrian_crossing_human_contr] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[junction_location] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_junction_location PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[light_conditions] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_light_conditions PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[local_authority_highway] (&#xA;[code]  nchar(10) NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_local_authority_highway PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[local_authorty_district] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_local_authorty_district PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[pedestrian_crossing_human_contr] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_pedestrian_crossing_human_contr PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -6976,7 +6977,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
-              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[pedestrian_location] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[pedestrian_movement] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[point_of_impact] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[police_force] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[police_officer_attend_scene] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[pedestrian_location] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_pedestrian_location PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[pedestrian_movement] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_pedestrian_movement PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[point_of_impact] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_point_of_impact PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[police_force] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_police_force PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[police_officer_attend_scene] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_police_officer_attend_scene PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -8694,7 +8695,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
-              SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[road_class]') AND type in (N'U'))&#xA;DROP TABLE  [RAW].[road_class]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[road_type]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[road_type]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[sex_of_driver]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[sex_of_drive]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[urban_or_rural_area]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[urban_or_rural_area]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[vehicle_location]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[vehicle_location]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[road_class]') AND type in (N'U'))&#xA;DROP TABLE  [RAW].[road_class]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[road_type]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[road_type]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[sex_of_driver]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[sex_of_driver]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[urban_or_rural_area]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[urban_or_rural_area]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[vehicle_location]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[vehicle_location]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -8710,7 +8711,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
-              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[road_class] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[road_type] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[sex_of_driver] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[urban_or_rural_area] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[vehicle_location] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[road_class] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_road_class PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[road_type] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_road_type PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[sex_of_driver] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_sex_of_driver PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[urban_or_rural_area] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_urban_or_rural_area PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[vehicle_location] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_vehicle_location PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -9438,7 +9439,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
-              SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N' [RAW].[vehicle_manoeuvre]') AND type in (N'U'))&#xA;DROP TABLE  [RAW].[vehicle_manoeuvre]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[vehicle_type]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[vehicle_type]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="USE [Distance_Team11]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[vehicle_manoeuvre]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[vehicle_manoeuvre]&#xA;GO&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[RAW].[vehicle_type]') AND type in (N'U'))&#xA;DROP TABLE [RAW].[vehicle_type]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -9454,7 +9455,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4D214D6D-1019-46A6-93FB-0D1CC8D9459B}"
-              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[vehicle_manoeuvre] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[vehicle_type] (&#xA;[code] smallint,&#xA;[label] nvarchar(255)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE [RAW].[vehicle_manoeuvre] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_vehicle_manoeuvre PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;CREATE TABLE [RAW].[vehicle_type] (&#xA;[code] smallint NOT NULL,&#xA;[label] nvarchar(255),&#xA;CONSTRAINT PK_vehicle_type PRIMARY KEY ([code])&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -9491,6 +9492,71 @@
     <LayoutInfo>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail\Data Flow Task 2"
+          TopLeft="72.5,229.5" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail\Drop table(s) SQL Task 2"
+          TopLeft="53.5,25.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail\Preparation SQL Task 2"
+          TopLeft="57.5,127.5" />
+        <EdgeLayout
+          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail.PrecedenceConstraints[{1C7C24E6-F504-491A-8EEC-73C9B1C67D11\}]"
+          TopLeft="152.5,67.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.304453125,20.4453125,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail.PrecedenceConstraints[{5EB12595-B400-4D05-B327-8F8E6E07F933\}]"
+          TopLeft="152.5,169.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="313,309"
+          Size="313,352"
+          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail"
+          TopLeft="681,59" />
         <NodeLayout
           Size="160,42"
           Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1"
@@ -9555,72 +9621,7 @@
           PanelSize="324,321"
           Size="324,364"
           Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class"
-          TopLeft="290,61" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail\Data Flow Task 2"
-          TopLeft="72.5,229.5" />
-        <NodeLayout
-          Size="198,42"
-          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail\Drop table(s) SQL Task 2"
-          TopLeft="53.5,25.5" />
-        <NodeLayout
-          Size="190,42"
-          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail\Preparation SQL Task 2"
-          TopLeft="57.5,127.5" />
-        <EdgeLayout
-          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail.PrecedenceConstraints[{1C7C24E6-F504-491A-8EEC-73C9B1C67D11\}]"
-          TopLeft="152.5,67.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-25.304453125,20.4453125,50.60890625,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail.PrecedenceConstraints[{5EB12595-B400-4D05-B327-8F8E6E07F933\}]"
-          TopLeft="152.5,169.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="310,314"
-          Size="310,357"
-          Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail"
-          TopLeft="680,59" />
+          TopLeft="291,61" />
         <NodeLayout
           Size="160,42"
           Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3"
@@ -9685,7 +9686,7 @@
           PanelSize="320,327"
           Size="320,370"
           Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr"
-          TopLeft="683,484" />
+          TopLeft="684,484" />
         <NodeLayout
           Size="160,42"
           Id="Package\Load pedestrian_location, pedestrian_movement, point_of_impact, police_force, police_officer_attend_scene\Data Flow Task 4"
@@ -9747,8 +9748,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="328,328"
-          Size="328,371"
+          PanelSize="322,326"
+          Size="322,369"
           Id="Package\Load pedestrian_location, pedestrian_movement, point_of_impact, police_force, police_officer_attend_scene"
           TopLeft="292,486" />
         <NodeLayout
@@ -9815,7 +9816,7 @@
           PanelSize="326,312"
           Size="326,355"
           Id="Package\Load road_class, road_type, sex_of_driver, urban_or_rural_area, vehicle_location"
-          TopLeft="291,921" />
+          TopLeft="292,921" />
         <NodeLayout
           Size="160,42"
           Id="Package\Load vehicle_manoeuvre, vehicle_type\Data Flow Task 6"
@@ -9880,362 +9881,15 @@
           PanelSize="328,319"
           Size="328,362"
           Id="Package\Load vehicle_manoeuvre, vehicle_type"
-          TopLeft="684,913" />
+          TopLeft="685,913" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="243,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 1 - Ped_Cross_Physical"
-          TopLeft="264,209.5" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 3 - 0"
-          TopLeft="13.5,107.5" />
-        <NodeLayout
-          Size="183,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source 3 - age_band$"
-          TopLeft="13,5.5" />
-        <NodeLayout
-          Size="228,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source 1 - Ped_Cross_Physical$"
-          TopLeft="271.5,5.5" />
-        <NodeLayout
-          Size="218,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 4 - casualty_class"
-          TopLeft="567.5,209.5" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 2 - 0"
-          TopLeft="871.5,107.5" />
-        <NodeLayout
-          Size="233,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 2 - accident_severity"
-          TopLeft="846,209.5" />
-        <NodeLayout
-          Size="223,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination - Journey_purpose"
-          TopLeft="1140,209.5" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 1 - 0"
-          TopLeft="294.5,107.5" />
-        <NodeLayout
-          Size="203,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source 4 - casualty_class$"
-          TopLeft="575,5.5" />
-        <NodeLayout
-          Size="218,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source 2 - accident_severity$"
-          TopLeft="853.5,5.49999999999989" />
-        <NodeLayout
-          Size="208,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source - Journey_purpose$"
-          TopLeft="1147.5,5.49999999999989" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 4 - 0"
-          TopLeft="585.5,107.5" />
-        <NodeLayout
-          Size="198,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 3 - age_band"
-          TopLeft="5.5,209.5" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 0 - 0"
-          TopLeft="1160.5,107.5" />
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output2]"
-          TopLeft="962.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output1]"
-          TopLeft="385.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output]"
-          TopLeft="1251.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output4]"
-          TopLeft="676.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output3]"
-          TopLeft="104.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output2]"
-          TopLeft="962.5,47.4999999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output1]"
-          TopLeft="385.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output]"
-          TopLeft="1251.5,47.4999999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output4]"
-          TopLeft="676.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output3]"
-          TopLeft="104.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 1 - Ped_Cross_Physical">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 4 - casualty_class">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 3 - age_band">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail\Data Flow Task 2">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="216,42"
           Id="Package\Load casualty_severity, casualty_type, day_of_week, junction_control, junction_detail\Data Flow Task 2\Destination 6 - casualty_type"
@@ -10327,7 +9981,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10361,7 +10017,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10395,7 +10053,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10429,7 +10089,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10451,7 +10113,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10485,7 +10149,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10507,7 +10173,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10541,7 +10209,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10563,7 +10233,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10597,7 +10269,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10669,22 +10343,337 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3">
+    design-time-name="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1">
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="222,42"
-          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 10 - junction_location$"
-          TopLeft="31,80" />
+          Size="243,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 1 - Ped_Cross_Physical"
+          TopLeft="264,209.5" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 14 - 0"
-          TopLeft="1196,171" />
+          Size="182,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 3 - 0"
+          TopLeft="13.5,107.5" />
         <NodeLayout
-          Size="261,42"
-          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 13 - local_authorty_district"
-          TopLeft="849,249" />
+          Size="183,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source 3 - age_band$"
+          TopLeft="13,5.5" />
+        <NodeLayout
+          Size="228,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source 1 - Ped_Cross_Physical$"
+          TopLeft="271.5,5.5" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 4 - casualty_class"
+          TopLeft="567.5,209.5" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 2 - 0"
+          TopLeft="871.5,107.5" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 2 - accident_severity"
+          TopLeft="846,209.5" />
+        <NodeLayout
+          Size="223,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination - Journey_purpose"
+          TopLeft="1140,209.5" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 1 - 0"
+          TopLeft="294.5,107.5" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source 4 - casualty_class$"
+          TopLeft="575,5.5" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source 2 - accident_severity$"
+          TopLeft="853.5,5.49999999999989" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Source - Journey_purpose$"
+          TopLeft="1147.5,5.49999999999989" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 4 - 0"
+          TopLeft="585.5,107.5" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 3 - age_band"
+          TopLeft="5.5,209.5" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Data Conversion 0 - 0"
+          TopLeft="1160.5,107.5" />
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output2]"
+          TopLeft="962.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output1]"
+          TopLeft="385.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output]"
+          TopLeft="1251.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output4]"
+          TopLeft="676.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output3]"
+          TopLeft="104.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output2]"
+          TopLeft="962.5,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output1]"
+          TopLeft="385.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Excel Source Output]"
+          TopLeft="1251.5,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output4]"
+          TopLeft="676.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1.Paths[Data Conversion Output3]"
+          TopLeft="104.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 1 - Ped_Cross_Physical">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 4 - casualty_class">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load journey_purp, ped_crss_phy, accident_severity, age_band, casual_class\Data Flow Task 1\Destination 3 - age_band">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="231,42"
           Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 11 - light_conditions"
@@ -10706,10 +10695,6 @@
           Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 14 - pedestrian_crossing_human_contr"
           TopLeft="1131,260" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 11 - 0"
-          TopLeft="330,169" />
-        <NodeLayout
           Size="271,42"
           Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 12 - local_authority_highway"
           TopLeft="553,247" />
@@ -10719,8 +10704,8 @@
           TopLeft="28,246" />
         <NodeLayout
           Size="188,42"
-          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 10 - 0"
-          TopLeft="52,173" />
+          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 11 - 0"
+          TopLeft="330,169" />
         <NodeLayout
           Size="304,42"
           Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 14 - pedestrian_crossing_human_contr$"
@@ -10729,6 +10714,88 @@
           Size="256,42"
           Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 12 - local_authority_highway$"
           TopLeft="560,88" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 10 - junction_location$"
+          TopLeft="31,80" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 14 - 0"
+          TopLeft="1196,171" />
+        <NodeLayout
+          Size="261,42"
+          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 13 - local_authorty_district"
+          TopLeft="849,249" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 10 - 0"
+          TopLeft="52,173" />
+        <EdgeLayout
+          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3.Paths[Data Conversion Output2]"
+          TopLeft="976.75,206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3.Paths[Data Conversion Output1]"
+          TopLeft="421.25,211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3.Paths[Data Conversion Output]"
+          TopLeft="146.25,215">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3.Paths[Excel Source Output3]"
           TopLeft="1282,138">
@@ -10851,72 +10918,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3.Paths[Data Conversion Output2]"
-          TopLeft="976.75,206">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43"
-              Start="0,0"
-              End="0,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3.Paths[Data Conversion Output1]"
-          TopLeft="421.25,211">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3.Paths[Data Conversion Output]"
-          TopLeft="146.25,215">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="188,42"
           Id="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Data Conversion 12 - 0"
@@ -10968,32 +10969,6 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 10 - junction_location$">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 13 - local_authorty_district">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 13 - local_authorty_district$">
     <Properties>
@@ -11072,11 +11047,37 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Source 10 - junction_location$">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load junction_location, light_conditions, local_authority_highway, local_authorty_district, pedestrian_crossing_human_contr\Data Flow Task 3\Destination 13 - local_authorty_district">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Load pedestrian_location, pedestrian_movement, point_of_impact, police_force, police_officer_attend_scene\Data Flow Task 4">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="262,42"
           Id="Package\Load pedestrian_location, pedestrian_movement, point_of_impact, police_force, police_officer_attend_scene\Data Flow Task 4\Destination 16 - pedestrian_movement"
@@ -11156,7 +11157,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11178,7 +11181,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11200,7 +11205,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11222,7 +11229,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11244,7 +11253,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11266,7 +11277,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11288,7 +11301,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11310,7 +11325,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11344,7 +11361,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11366,7 +11385,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11454,7 +11475,7 @@
     design-time-name="Package\Load road_class, road_type, sex_of_driver, urban_or_rural_area, vehicle_location\Data Flow Task 5">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="205,42"
           Id="Package\Load road_class, road_type, sex_of_driver, urban_or_rural_area, vehicle_location\Data Flow Task 5\Destination 21 - road_type"
@@ -11534,7 +11555,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11556,7 +11579,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11578,7 +11603,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11600,7 +11627,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11622,7 +11651,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11644,7 +11675,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11666,7 +11699,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11688,7 +11723,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11710,7 +11747,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11732,7 +11771,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11833,7 +11874,7 @@
     design-time-name="Package\Load vehicle_manoeuvre, vehicle_type\Data Flow Task 6">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="201,42"
           Id="Package\Load vehicle_manoeuvre, vehicle_type\Data Flow Task 6\Source 26 - vehicle_type$"
@@ -11877,7 +11918,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11899,7 +11942,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11921,7 +11966,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11943,7 +11990,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -8,12 +8,12 @@
   DTS:Description="SSIS Package Description"
   DTS:DTSID="{EAF184E6-2AA9-421F-9953-6C65AD9C36C2}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Load_Casualties"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{2D8FA1DF-A9F2-40E2-AE12-28E938EE0A71}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{AC2F7204-9A88-448B-88B8-6AE82C969BF5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1322,7 +1322,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{2CD7BEB4-852A-4D50-A14C-D079B6543D72}"
-          SQLTask:SqlStatementSource="CREATE TABLE [RAW].[Casualties] (&#xA;[Accident_Index] varchar(15),&#xA;[Vehicle_Reference] smallint,&#xA;[Casualty_Reference] smallint,&#xA;[Casualty_Class] smallint,&#xA;[Sex_of_Casualty] smallint,&#xA;[Age_of_Casualty] smallint,&#xA;[Age_Band_of_Casualty] smallint,&#xA;[Casualty_Severity] smallint,&#xA;[Pedestrian_Location] smallint,&#xA;[Pedestrian_Movement] smallint,&#xA;[Car_Passenger] smallint,&#xA;[Bus_or_Coach_Passenger] smallint,&#xA;[Pedestrian_Road_Maintenance_Worker] smallint,&#xA;[Casualty_Type] smallint,&#xA;[Casualty_Home_Area_Type] smallint&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="CREATE TABLE [RAW].[Casualties] (&#xA;[Accident_Index] varchar(15) NOT NULL,&#xA;[Vehicle_Reference] smallint NOT NULL,&#xA;[Casualty_Reference] smallint NOT NULL,&#xA;[Casualty_Class] smallint,&#xA;[Sex_of_Casualty] smallint,&#xA;[Age_of_Casualty] smallint,&#xA;[Age_Band_of_Casualty] smallint,&#xA;[Casualty_Severity] smallint,&#xA;[Pedestrian_Location] smallint,&#xA;[Pedestrian_Movement] smallint,&#xA;[Car_Passenger] smallint,&#xA;[Bus_or_Coach_Passenger] smallint,&#xA;[Pedestrian_Road_Maintenance_Worker] smallint,&#xA;[Casualty_Type] smallint,&#xA;[Casualty_Home_Area_Type] smallint,&#xA;CONSTRAINT PK_Casualties PRIMARY KEY ([Accident_Index] , [Vehicle_Reference],[Casualty_Reference]  )&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
